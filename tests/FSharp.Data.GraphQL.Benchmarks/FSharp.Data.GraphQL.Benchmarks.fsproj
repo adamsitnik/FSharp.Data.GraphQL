@@ -28,6 +28,12 @@
     <ProjectReference Include="..\..\src\FSharp.Data.GraphQL.Server\FSharp.Data.GraphQL.Server.fsproj" />
     <ProjectReference Include="..\..\src\FSharp.Data.GraphQL.Server.Middleware\FSharp.Data.GraphQL.Server.Middleware.fsproj" />
   </ItemGroup>
+  <ItemGroup>
+    <!-- following dependencies are added in explicit way as a BenchmarkDotNet workaround -->
+    <PackageReference Include="FSharp.Core" Version="4.7.0" />
+    <PackageReference Include="System.Reactive" Version="4.3.2" />
+    <PackageReference Include="FParsec" Version="1.1.1" />
+  </ItemGroup>
 
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
